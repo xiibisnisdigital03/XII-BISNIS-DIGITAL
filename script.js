@@ -1,32 +1,22 @@
-// Smooth scroll navbar
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener("click", function(e) {
-    e.preventDefault();
-    document.querySelector(this.getAttribute("href")).scrollIntoView({
-      behavior: "smooth"
-    });
+// scroll smooth
+function scrollToSection(id) {
+  document.getElementById(id).scrollIntoView({
+    behavior: "smooth"
   });
-});
+}
 
-// Navbar berubah saat scroll
+// navbar hide / show
+let lastScroll = 0;
+const navbar = document.querySelector(".navbar");
+
 window.addEventListener("scroll", () => {
-  const nav = document.querySelector(".navbar");
-  if (window.scrollY > 50) {
-    nav.style.background = "rgba(0,0,0,0.9)";
+  let currentScroll = window.pageYOffset;
+
+  if (currentScroll > lastScroll) {
+    navbar.style.top = "-80px"; // hilang
   } else {
-    nav.style.background = "rgba(0,0,0,0.7)";
+    navbar.style.top = "0"; // muncul
   }
-});
 
-// Animasi muncul saat scroll
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("show");
-    }
-  });
-});
-
-document.querySelectorAll(".card").forEach(el => {
-  observer.observe(el);
+  lastScroll = currentScroll;
 });

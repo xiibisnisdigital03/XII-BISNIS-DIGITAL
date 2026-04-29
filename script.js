@@ -1,16 +1,7 @@
-// PLAY scroll
-document.querySelector(".play").onclick = () => {
+const btn = document.getElementById("btnScroll");
+
+btn.addEventListener("click", () => {
     document.getElementById("gallery").scrollIntoView({
         behavior: "smooth"
     });
-};
-
-// INFO popup
-document.querySelector(".info").onclick = () => {
-    alert("Website kenangan kelas XII BISNIS DIGITAL 🎓");
-};
-
-// SEND
-document.getElementById("sendBtn").onclick = () => {
-    alert("Pesan terkirim (simulasi)");
-};
+});

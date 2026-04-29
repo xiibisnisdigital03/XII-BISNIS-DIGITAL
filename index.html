@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>XII BISNIS DIGITAL</title>
+<title>Moment Kelas</title>
 
 <style>
 * {
@@ -14,59 +14,96 @@
 
 body {
     background: black;
-    color: white;
     font-family: Arial, sans-serif;
+    color: white;
 }
 
-/* HERO */
+/* CONTAINER FULL */
 .hero {
     height: 100vh;
     background: url("kelas.jpg") center/cover no-repeat;
     position: relative;
 }
 
-/* OVERLAY (UDAH DIBIKIN TERANG) */
+/* OVERLAY */
 .overlay {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to top, rgba(0,0,0,0.3), rgba(0,0,0,0.05));
+    background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
 }
 
-/* TEXT */
-.hero-content {
+/* TEXT BESAR */
+.big-text {
     position: absolute;
-    bottom: 80px;
-    left: 60px;
+    left: 30px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
-.hero-content h1 {
-    font-size: 60px;
+.big-text h1 {
+    font-size: 80px;
+    font-weight: bold;
 }
 
-.hero-content p {
-    margin-top: 10px;
+.big-text span {
+    font-size: 50px;
+    opacity: 0.7;
+}
+
+/* CAPTURE TEXT */
+.capture {
+    position: absolute;
+    left: 120px;
+    top: 30%;
+    transform: rotate(-90deg);
+    font-size: 20px;
+}
+
+/* MENU KANAN */
+.menu {
+    position: absolute;
+    right: 20px;
+    top: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+.menu a:hover {
+    opacity: 1;
+}
+
+/* TEXT BAWAH */
+.bottom-text {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    max-width: 300px;
+    font-size: 14px;
 }
 
 /* BUTTON */
-button {
-    margin-top: 15px;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.play {
-    background: white;
-    color: black;
-}
-
-.info {
-    background: rgba(255,255,255,0.3);
-    color: white;
+.btn {
+    position: absolute;
+    left: 20px;
+    bottom: 100px;
+    border: 1px solid white;
+    padding: 5px 10px;
+    border-radius: 10px;
 }
 </style>
+
 </head>
 
 <body>
@@ -74,24 +111,32 @@ button {
 <section class="hero">
     <div class="overlay"></div>
 
-    <div class="hero-content">
-        <h1>KAMI PAMIT</h1>
-        <p>XII BISNIS DIGITAL 2026 🎓</p>
-
-        <button onclick="scrollDown()">▶ PLAY</button>
-        <button onclick="showInfo()">ℹ INFO</button>
+    <!-- TEXT BESAR -->
+    <div class="big-text">
+        <h1>Moment</h1>
+        <span>+</span>
     </div>
+
+    <!-- CAPTURE -->
+    <div class="capture">Capture the</div>
+
+    <!-- MENU -->
+    <div class="menu">
+        <a href="#">moment</a>
+        <a href="#">pic</a>
+        <a href="#">about</a>
+        <a href="#">kelas</a>
+    </div>
+
+    <!-- TEXT BAWAH -->
+    <div class="bottom-text">
+        Sampai kita sadar bahwa lengkap itu bukan soal jumlah, tapi ikatan yang tetap kuat.
+    </div>
+
+    <!-- BUTTON -->
+    <div class="btn">Until when?</div>
+
 </section>
-
-<script>
-function scrollDown() {
-    window.scrollBy({ top: window.innerHeight, behavior: "smooth" });
-}
-
-function showInfo() {
-    alert("Website kenangan kelas XII BISNIS DIGITAL 🎓");
-}
-</script>
 
 </body>
 </html>

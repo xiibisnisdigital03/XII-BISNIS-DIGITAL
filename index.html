@@ -1,88 +1,53 @@
-<h1 style="color:red">INI TEST</h1>
 <!DOCTYPE html>
 <html lang="id">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>XII BISNIS DIGITAL</title>
+<title>Kelas XII BD</title>
 
-<link rel="stylesheet" href="style.css">
+<style>
+body{
+    margin:0;
+    font-family:Arial;
+    color:white;
+    background:black;
+}
+
+/* BACKGROUND FOTO */
+.hero{
+    height:100vh;
+    background:url("kelas.jpg") center/cover no-repeat;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+/* BOX TEXT */
+.box{
+    background:rgba(0,0,0,0.4);
+    padding:30px;
+    border-radius:10px;
+    text-align:center;
+}
+
+h1{
+    font-size:50px;
+}
+
+p{
+    margin-top:10px;
+}
+</style>
 </head>
 
 <body>
 
-<!-- HERO -->
-<section class="hero">
-    <div class="overlay"></div>
-
-    <div class="hero-content">
+<div class="hero">
+    <div class="box">
         <h1>KAMI PAMIT</h1>
         <p>XII BISNIS DIGITAL 2026 🎓</p>
-
-        <button class="play">▶ PLAY</button>
-        <button class="info">ℹ INFO</button>
-    </div>
-</section>
-
-<!-- GALERI -->
-<section id="gallery">
-
-<div class="category">
-    <h3>📸 Kegiatan Kelas</h3>
-    <div class="row">
-        <img src="kelas.jpg">
-        <img src="kelas.jpg">
-        <img src="kelas.jpg">
-        <img src="kelas.jpg">
     </div>
 </div>
-
-<div class="category">
-    <h3>🎉 Momen Seru</h3>
-    <div class="row">
-        <img src="kelas.jpg">
-        <img src="kelas.jpg">
-        <img src="kelas.jpg">
-        <img src="kelas.jpg">
-    </div>
-</div>
-
-</section>
-
-<!-- CONTACT -->
-<section class="contact">
-
-<h2>Mari <span>Terhubung</span></h2>
-<p>Kirim pesan kenangan 🎓</p>
-
-<div class="contact-box">
-
-<div class="left">
-    <p class="status">● SYSTEM ONLINE</p>
-
-    <div class="card">
-        <small>EMAIL</small>
-        <h3>kelas@email.com</h3>
-    </div>
-
-    <div class="card">
-        <small>WHATSAPP</small>
-        <h3>+62 812 xxxx xxxx</h3>
-    </div>
-</div>
-
-<div class="right">
-    <h3>KIRIM PESAN</h3>
-    <input type="text" placeholder="Nama">
-    <input type="email" placeholder="Email">
-    <textarea placeholder="Pesan..."></textarea>
-    <button id="sendBtn">KIRIM</button>
-</div>
-
-</div>
-</section>
-
-<script src="script.js"></script>
 
 </body>
 </html>

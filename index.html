@@ -1,39 +1,68 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kami Pamit - XII Bisnis Digital 2026</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Website Sekolah</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <section class="hero">
-        <img src="bg.jpg" class="bg">
+<!-- NAVBAR -->
+<header class="navbar">
+    <div class="logo">SMK NEGERI 3 PALEMBANG</div>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Profil</a>
+        <a href="#">Jurusan</a>
+        <a href="#">Galeri</a>
+        <a href="#">Kontak</a>
+    </nav>
+</header>
 
-        <div class="overlay"></div>
+<!-- HERO SLIDER -->
+<section class="hero">
+    <div class="slides">
+        <img src="bg.jpg" class="slide active">
+        <img src="bg2.jpg" class="slide">
+        <img src="bg3.jpg" class="slide">
+    </div>
 
-        <div class="content">
-            <h1>KAMI PAMIT</h1>
-            <p>XII BISNIS DIGITAL 2026 🎓</p>
+    <div class="hero-text">
+        <h1>Sekolah Unggul & Berprestasi</h1>
+        <p>Membangun generasi masa depan</p>
+    </div>
+</section>
 
-            <button id="btnScroll">Lihat Kenangan</button>
+<!-- EKSTRAKURIKULER -->
+<section class="ekstra">
+    <h2>Extrakurikuler</h2>
+    <p class="sub">SMA MUHAMMADIYAH 2 PALEMBANG</p>
+
+    <div class="cards">
+
+        <div class="card">
+            <img src="paski.jpg">
+            <h3>Paskibraka</h3>
         </div>
-    </section>
 
-    <section class="gallery" id="gallery">
-        <h2>Kenangan Kami</h2>
-
-        <div class="grid">
-            <img src="bg.jpg">
-            <img src="bg.jpg">
-            <img src="bg.jpg">
+        <div class="card">
+            <img src="futsal.jpg">
+            <h3>Futsal</h3>
         </div>
-    </section>
 
-    <footer>
-        <p>© 2026 XII Bisnis Digital</p>
-    </footer>
+        <div class="card">
+            <img src="hw.jpg">
+            <h3>Hizbul Wathan</h3>
+        </div>
+
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 Sekolah Indonesia</p>
+</footer>
 
 <script src="script.js"></script>
 </body>

@@ -1,4 +1,3 @@
-// DARK / LIGHT MODE
 const toggle = document.getElementById("toggleMode");
 
 toggle.onclick = () => {

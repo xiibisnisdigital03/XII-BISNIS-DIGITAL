@@ -1,53 +1,40 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kelas XII BD</title>
-
-<style>
-body{
-    margin:0;
-    font-family:Arial;
-    color:white;
-    background:black;
-}
-
-/* BACKGROUND FOTO */
-.hero{
-    height:100vh;
-    background:url("kelas.jpg") center/cover no-repeat;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-}
-
-/* BOX TEXT */
-.box{
-    background:rgba(0,0,0,0.4);
-    padding:30px;
-    border-radius:10px;
-    text-align:center;
-}
-
-h1{
-    font-size:50px;
-}
-
-p{
-    margin-top:10px;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kami Pamit - XII Bisnis Digital 2026</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<div class="hero">
-    <div class="box">
-        <h1>KAMI PAMIT</h1>
-        <p>XII BISNIS DIGITAL 2026 🎓</p>
-    </div>
-</div>
+    <section class="hero">
+        <img src="bg.jpg" class="bg">
 
+        <div class="overlay"></div>
+
+        <div class="content">
+            <h1>KAMI PAMIT</h1>
+            <p>XII BISNIS DIGITAL 2026 🎓</p>
+
+            <button id="btnScroll">Lihat Kenangan</button>
+        </div>
+    </section>
+
+    <section class="gallery" id="gallery">
+        <h2>Kenangan Kami</h2>
+
+        <div class="grid">
+            <img src="bg.jpg">
+            <img src="bg.jpg">
+            <img src="bg.jpg">
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 XII Bisnis Digital</p>
+    </footer>
+
+<script src="script.js"></script>
 </body>
 </html>

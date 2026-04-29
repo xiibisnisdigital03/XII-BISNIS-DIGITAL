@@ -1,22 +1,17 @@
-// scroll smooth
-function scrollToSection(id) {
-  document.getElementById(id).scrollIntoView({
-    behavior: "smooth"
-  });
-}
-
-// navbar hide / show
 let lastScroll = 0;
 const navbar = document.querySelector(".navbar");
+const hero = document.querySelector(".hero-content");
 
 window.addEventListener("scroll", () => {
-  let currentScroll = window.pageYOffset;
+  const currentScroll = window.pageYOffset;
 
-  if (currentScroll > lastScroll) {
-    navbar.style.top = "-80px"; // hilang
+  if (currentScroll > lastScroll && currentScroll > 50) {
+    navbar.style.top = "-100px";
   } else {
-    navbar.style.top = "0"; // muncul
+    navbar.style.top = "0";
   }
+
+  hero.style.opacity = 1 - currentScroll / 400;
 
   lastScroll = currentScroll;
 });

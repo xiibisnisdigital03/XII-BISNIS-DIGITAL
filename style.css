@@ -1,1 +1,26 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: white;
+    text-align: center;
+}
 
+header {
+    background: #1e293b;
+    padding: 20px;
+}
+
+.hero {
+    padding: 50px;
+}
+
+.gallery {
+    padding: 40px;
+}
+
+footer {
+    background: #1e293b;
+    padding: 20px;
+    margin-top: 30px;
+}

@@ -1,69 +1,180 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Website Sekolah</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kelas Kita</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: white;
+    }
+
+    /* Navbar */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px 50px;
+      background: rgba(0,0,0,0.3);
+      backdrop-filter: blur(10px);
+    }
+
+    nav h1 {
+      font-size: 22px;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 20px;
+    }
+
+    nav ul li {
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    nav ul li:hover {
+      color: #ffd369;
+    }
+
+    /* Hero */
+    .hero {
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    .hero h2 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      opacity: 0.8;
+    }
+
+    .btn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      border: none;
+      background: #ffd369;
+      color: black;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #ffb703;
+    }
+
+    /* Card Section */
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 50px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.1);
+      padding: 20px;
+      border-radius: 10px;
+      backdrop-filter: blur(10px);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(0,0,0,0.3);
+    }
+  </style>
 </head>
 <body>
 
-<!-- NAVBAR -->
-<header class="navbar">
-    <div class="logo">SMK NEGERI 3 PALEMBANG</div>
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">Profil</a>
-        <a href="#">Jurusan</a>
-        <a href="#">Galeri</a>
-        <a href="#">Kontak</a>
-    </nav>
-</header>
+  <!-- Navbar -->
+  <nav>
+    <h1>Kelas XI RPL</h1>
+    <ul>
+      <li onclick="scrollToSection('home')">Home</li>
+      <li onclick="scrollToSection('anggota')">Anggota</li>
+      <li onclick="scrollToSection('about')">About</li>
+    </ul>
+  </nav>
 
-<!-- HERO SLIDER -->
-<section class="hero">
-    <div class="slides">
-        <img src="bg.jpg" class="slide active">
-        <img src="bg2.jpg" class="slide">
-        <img src="bg3.jpg" class="slide">
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <h2>Website Kelas Kita</h2>
+    <p>Solid, Kompak, dan Berprestasi 🚀</p>
+    <button class="btn" onclick="showAlert()">Lihat Info</button>
+  </section>
+
+  <!-- Anggota -->
+  <section class="container" id="anggota">
+    <div class="card">
+      <img src="https://via.placeholder.com/300" alt="">
+      <h3>Nama 1</h3>
+      <p>Ketua Kelas</p>
     </div>
 
-    <div class="hero-text">
-        <h1>Sekolah Unggul & Berprestasi</h1>
-        <p>Membangun generasi masa depan</p>
+    <div class="card">
+      <img src="https://via.placeholder.com/300" alt="">
+      <h3>Nama 2</h3>
+      <p>Wakil</p>
     </div>
-</section>
 
-<!-- EKSTRAKURIKULER -->
-<section class="ekstra">
-    <h2>Extrakurikuler</h2>
-    <p class="sub">SMA MUHAMMADIYAH 2 PALEMBANG</p>
-
-    <div class="cards">
-
-        <div class="card">
-            <img src="paski.jpg">
-            <h3>Paskibraka</h3>
-        </div>
-
-        <div class="card">
-            <img src="futsal.jpg">
-            <h3>Futsal</h3>
-        </div>
-
-        <div class="card">
-            <img src="hw.jpg">
-            <h3>Hizbul Wathan</h3>
-        </div>
-
+    <div class="card">
+      <img src="https://via.placeholder.com/300" alt="">
+      <h3>Nama 3</h3>
+      <p>Sekretaris</p>
     </div>
-</section>
+  </section>
 
-<!-- FOOTER -->
-<footer>
-    <p>© 2026 Sekolah Indonesia</p>
-</footer>
+  <!-- About -->
+  <section class="hero" id="about">
+    <h2>Tentang Kelas</h2>
+    <p>Kelas ini berfokus pada pengembangan skill IT, teamwork, dan kreativitas.</p>
+  </section>
 
-<script src="script.js"></script>
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 Kelas XI RPL</p>
+  </footer>
+
+  <script>
+    function showAlert() {
+      alert("Selamat datang di Website Kelas!");
+    }
+
+    function scrollToSection(id) {
+      document.getElementById(id).scrollIntoView({
+        behavior: "smooth"
+      });
+    }
+  </script>
+
 </body>
 </html>

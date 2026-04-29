@@ -5,70 +5,72 @@
 }
 
 body {
-    background: #000;
-    color: white;
     font-family: Arial, sans-serif;
+    background: black;
+    color: white;
 }
 
-/* HEADER */
-header {
-    padding: 15px 20px;
-    background: #111;
-}
-
-/* HERO (dipendekin biar ga jauh) */
+/* HERO FULL SCREEN LANDSCAPE */
 .hero {
-    padding: 60px 20px 30px;
-    text-align: center;
+    height: 100vh;
+    background: url("https://picsum.photos/1600/900") center/cover no-repeat;
+    position: relative;
 }
 
-.hero h1 {
-    font-size: 28px;
+/* DARK OVERLAY */
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, black, rgba(0,0,0,0.4));
 }
 
-.hero button {
-    margin-top: 10px;
-    padding: 8px 14px;
-    background: #ff2e7a;
+/* CONTENT */
+.hero-content {
+    position: absolute;
+    bottom: 80px;
+    left: 60px;
+    max-width: 500px;
+}
+
+.small {
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+.netflix {
+    color: red;
+    margin-bottom: 10px;
+}
+
+/* TITLE */
+.hero-content h1 {
+    font-size: 60px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.sub {
+    letter-spacing: 3px;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* BUTTON */
+.buttons button {
+    padding: 10px 20px;
+    margin-right: 10px;
     border: none;
+    cursor: pointer;
     border-radius: 5px;
 }
 
-/* CATEGORY */
-.category {
-    margin-top: 20px;
+.play {
+    background: white;
+    color: black;
 }
 
-.category h3 {
-    margin-left: 15px;
-    margin-bottom: 8px;
-    font-size: 16px;
-}
-
-/* ROW NETFLIX FIX */
-.row {
-    display: flex;
-    overflow-x: auto;
-    gap: 6px;
-    padding-left: 15px;
-}
-
-/* GAMBAR (lebih gede & rapet) */
-.row img {
-    width: 240px;
-    height: 135px;
-    object-fit: cover;
-    border-radius: 4px;
-    transition: 0.3s;
-}
-
-/* HOVER NETFLIX */
-.row img:hover {
-    transform: scale(1.15);
-    z-index: 10;
-}
-
-/* HIDE SCROLL */
-.row::-webkit-scrollbar {
-    display: none;
+.info {
+    background: rgba(255,255,255,0.3);
+    color: white;
 }

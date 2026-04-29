@@ -1,7 +1,10 @@
-const btn = document.getElementById("btnScroll");
+let slides = document.querySelectorAll(".slide");
+let index = 0;
 
-btn.addEventListener("click", () => {
-    document.getElementById("gallery").scrollIntoView({
-        behavior: "smooth"
-    });
-});
+function changeSlide() {
+    slides[index].classList.remove("active");
+    index = (index + 1) % slides.length;
+    slides[index].classList.add("active");
+}
+
+setInterval(changeSlide, 4000);

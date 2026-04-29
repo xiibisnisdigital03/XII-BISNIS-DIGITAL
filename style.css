@@ -12,72 +12,63 @@ body {
 
 /* HEADER */
 header {
-    padding: 15px 30px;
-    background: rgba(0,0,0,0.8);
-    position: fixed;
-    width: 100%;
-    z-index: 10;
+    padding: 15px 20px;
+    background: #111;
 }
 
-/* HERO */
+/* HERO (dipendekin biar ga jauh) */
 .hero {
-    height: 80vh;
-    background: url("https://picsum.photos/1600/900") center/cover;
-    display: flex;
-    align-items: center;
-    padding-left: 50px;
+    padding: 60px 20px 30px;
+    text-align: center;
 }
 
-.hero-text h1 {
-    font-size: 40px;
+.hero h1 {
+    font-size: 28px;
 }
 
-.hero-text button {
+.hero button {
     margin-top: 10px;
-    padding: 10px 15px;
-    background: red;
+    padding: 8px 14px;
+    background: #ff2e7a;
     border: none;
     border-radius: 5px;
-    cursor: pointer;
 }
 
 /* CATEGORY */
 .category {
     margin-top: 20px;
-    padding-left: 20px;
 }
 
 .category h3 {
-    margin-bottom: 10px;
+    margin-left: 15px;
+    margin-bottom: 8px;
+    font-size: 16px;
 }
 
-/* ROW NETFLIX */
+/* ROW NETFLIX FIX */
 .row {
     display: flex;
     overflow-x: auto;
-    gap: 5px;
+    gap: 6px;
+    padding-left: 15px;
 }
 
+/* GAMBAR (lebih gede & rapet) */
 .row img {
-    width: 220px;
-    height: 130px;
+    width: 240px;
+    height: 135px;
     object-fit: cover;
+    border-radius: 4px;
     transition: 0.3s;
-    border-radius: 3px;
 }
 
+/* HOVER NETFLIX */
 .row img:hover {
     transform: scale(1.15);
-    z-index: 2;
+    z-index: 10;
 }
 
-/* SCROLLBAR HIDE */
+/* HIDE SCROLL */
 .row::-webkit-scrollbar {
     display: none;
-}
-
-/* FOOTER */
-footer {
-    padding: 20px;
-    text-align: center;
 }

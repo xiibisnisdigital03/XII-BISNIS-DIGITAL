@@ -8,6 +8,13 @@ body {
     font-family: sans-serif;
     background: #0f172a;
     color: white;
+    transition: 0.3s;
+}
+
+/* LIGHT MODE */
+body.light {
+    background: #ffffff;
+    color: black;
 }
 
 /* HEADER */
@@ -25,11 +32,6 @@ header {
     padding: 60px 20px;
 }
 
-.hero h1 {
-    font-size: 32px;
-    margin: 10px 0;
-}
-
 .hero span {
     color: #ff2e7a;
 }
@@ -42,23 +44,19 @@ header {
     margin-bottom: 10px;
 }
 
-/* STATS BOX (INI YANG FIX UTAMA) */
+/* STATS */
 .stats {
     display: flex;
     justify-content: center;
     margin-top: 30px;
+    gap: 15px;
 }
 
 .stats div {
     background: #1e293b;
     padding: 20px 40px;
     border-radius: 10px;
-    margin: 0 10px;
     text-align: center;
-}
-
-.stats h2 {
-    font-size: 24px;
 }
 
 /* GALERI */
@@ -69,7 +67,6 @@ header {
 
 .grid {
     margin-top: 20px;
-
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 15px;
